@@ -32,7 +32,7 @@ def evaluate_model(name, y_true, y_pred):
     print(f"\n{name}:")
     print("Accuracy:", accuracy_score(y_true, y_pred))
     print("Precision:", precision_score(y_true, y_pred))
-    print("Recall:", recall_score(y_true, y_pred))  # Добавлено
+    print("Recall:", recall_score(y_true, y_pred))
     print("F1-Score:", f1_score(y_true, y_pred))
     print("Confusion Matrix:")
     print(confusion_matrix(y_true, y_pred))
@@ -49,7 +49,7 @@ for scoring in ['accuracy', 'f1', 'precision', 'recall']:
     print(f"Random Forest mean {scoring}: {rf_cv.mean():.3f}")
     print(f"Gradient Boosting mean {scoring}: {gb_cv.mean():.3f}")
 
-# Визуализация сравнения моделей (добавлен Recall)
+# Визуализация сравнения моделей
 metrics = ['Accuracy', 'Precision', 'Recall', 'F1-Score']
 rf_scores = [
     accuracy_score(y_test, rf_pred),
