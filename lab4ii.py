@@ -40,7 +40,7 @@ def evaluate_model(name, y_true, y_pred):
 evaluate_model("Random Forest", y_test, rf_pred)
 evaluate_model("Gradient Boosting", y_test, gb_pred)
 
-# Перекрестная проверка с разными метриками (добавлены F1 и Recall)
+# Перекрестная проверка с разными метриками
 print("\nCross-validation results:")
 for scoring in ['accuracy', 'f1', 'precision', 'recall']:
     rf_cv = cross_val_score(rf, X, y, cv=5, scoring=scoring)
